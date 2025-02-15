@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design process</title>
+    <link rel="stylesheet" href="./style1.css">
+</head>
+<header>
+    <div class="logo"><a href="./index.html"><img src="./logo.png" alt=""></a></div>
+    <nav>
+        <a href="./index.html" class="active">HOME</a>
+        <!-- Dropdown Menu for WORKS -->
+        <div class="dropdown">
+            <a href="#works">WORKS</a>
+            <div class="dropdown-content">
+                <a href="https://ilechang.github.io/final-ecom/#cad" target="_blank">BootMaster (Front-end Development)</a>
+                <a href="https://www.figma.com/proto/4gzRCpQGN1Hiyp0TXvql7C/Google-Maps---Final-Presentation?node-id=592-1604&t=9oKrZzIhzqb2jlBw-1" target="_blank">Google Maps Redesign (UX Case Study)</a>
+                <a href="./drumkit.html" target="_blank">Drum Kit (Interactive Webpage)</a>
+            </div>
+        </div>
+        <a href="./about.html">ABOUT</a> <!-- Active link for the current page -->
+    </nav>
+</header>
+<body>
+
+    <img src="drumKit.jpg" alt="" class="drumkitBanner" style="margin-bottom:20px">
+
+
+
+    <div style="display: flex; justify-content: space-between; gap: 20px; padding: 50px;">
+        <div
+            style="flex: 1; padding: 15px; border: 2px solid #00aaff; border-radius: 5px; box-sizing: border-box; background-color: #f9f9f9;">
+            <h2 style="margin-bottom: 10px;">Goal</h2>
+            <p style="margin: 0;">Learning JavaScript <b>event listeners</b>, <b>asyncronous operation</b> and
+                <b>loops</b>, CSS <b>animation</b> by creating an interactive website.
+            </p>
+        </div>
+        <div
+            style="flex: 1; padding: 15px; border: 2px solid #00aaff; border-radius: 5px; box-sizing: border-box; background-color: #f9f9f9;">
+            <h2 style="margin-bottom: 10px;">Tool</h2>
+            <p style="margin: 0;">HTML, CSS, JavaScript</p>
+        </div>
+        <div
+            style="flex: 1; padding: 15px; border: 2px solid #00aaff; border-radius: 5px; box-sizing: border-box; background-color: #f9f9f9;">
+            <h2 style="margin-bottom: 10px;">Role</h2>
+            <p style="margin: 0;">Front-end development, Usability testing</p>
+        </div>
+    </div>
+    <h1 style="padding-top:50px; margin-top:0px">Process</h1>
+    <div class="process-container">
+
+
+        <div class="process-step">
+            <h3>Step 1</h3>Download the starting code and images to create basic layout
+        </div>
+        <div class="arrow">&rarr;</div>
+        <div class="process-step">
+            <h3>Step 2</h3>Apply CSS animation to the title, and add JS event listeners to the buttons to make it play
+            sounds
+        </div>
+        <div class="arrow">&rarr;</div>
+        <div class="process-step">
+            <h3>Step 3</h3>Create advanced ripple effect using JS loop
+        </div>
+        <div class="arrow">&rarr;</div>
+        <div class="process-step">
+            <h3>Step 4</h3>Conduct usability testing to 5 users, all GBC interaction design students
+        </div>
+        <div class="arrow">&rarr;</div>
+        <div class="process-step">
+            <h3>Step 5</h3>Add instructions to guide users
+        </div>
+    </div>
+
+    <h1 style="padding-top:50px; margin-bottom: 20px; margin-top:30px;">Insights from Usability Testing</h1>
+    <div class="insights" style="text-align: left; ">
+        <ul>
+            <li style="margin-bottom: 15px;">3/5 users reported that it takes them several seconds to figure out they
+                need to press the buttons.</li>
+            <li style="margin-bottom: 15px;">5/5 suggested that more instructions are needed in order for them to
+                immediately know what to do.</li>
+            <li style="margin-bottom: 15px;">1/5 had a problem because they had Caps Lock on, and the website doesn't
+                accept uppercase letters.</li>
+        </ul>
+    </div>
+
+    <h1 style="padding-top:50px; margin-bottom: 10px; margin-top:30px">Design Iteration</h1>
+    <div class="three-column-layout">
+        <div class="column">
+            <img src="i1.jpg" alt="">
+            <h3 style="margin-bottom: 10px;">Add instruction:</h3>
+            <p>Too old school, is there a more interesting way?</p>
+        </div>
+        <div class="column">
+            <img src="i2.jpg" alt="">
+            <h3 style="margin-bottom: 10px;">Add instruction:</h3>
+            <p>Too old school, is there a more interesting way?</p>
+        </div>
+        <div class="column">
+            <img src="v1.jpg" alt="">
+            <h3 style="margin-bottom: 10px;">Add instruction: upon mouse hovering.
+            </h3>
+            <p>
+                Users feedback saying this is not obvious and intuitive enough</p>
+        </div>
+        <div class="column">
+            <img src="i3.jpg" alt="">
+            <h3 style="margin-bottom: 10px;">Providing More Feedback : If pressing the wrong keys, show a red visual
+                indicator and play a "wrong"
+                sound.
+            </h3>
+            <p>
+                Red Visual Indicator: The red color may be jarring to the eyes.
+                "Wrong" Sound: The sound may come across as noisy or annoying to the user.</p>
+        </div>
+
+    </div>
+    <hr>
+    <h1 style="padding-top:0px; margin-top:30px ;margin-bottom: 20px; ">Final version</h1>
+    <p style="margin-bottom: 20px; ">1. The instruction shows up automatically in Random positions.</p>
+    <p style="margin-bottom: 20px; ">2. The Drum Buttons blink and attract uses to interact with them.</p>
+
+    <img src="v2.jpg" alt="" style="  display: block; /* Ensures the image behaves like a block-level element */
+    max-width: 80%; /* Restricts the width to 60% of the screen */
+    height: auto; /* Maintains the aspect ratio */
+    margin: 0 auto 10px auto; /* Centers the image horizontally */
+    border-radius: 10px; /* Optional: Add rounded corners for style */">
+    <p style="margin-bottom: 20px; margin-top: 50px;">With the design process page on the bottom right of the page.</p>
+
+    <img src="3.jpg" alt="" style="  display: block; /* Ensures the image behaves like a block-level element */
+       max-width: 80%; 
+       height: auto; /* Maintains the aspect ratio */
+       margin: 0 auto 10px auto; /* Centers the image horizontally */
+       border-radius: 10px; /* Optional: Add rounded corners for style */">
+
+
+    <div class="takeaways">
+        <h1 style="padding-top:50px; margin-bottom: 20px; margin-top:60px ">Takeaways</h1>
+        <h3>
+            By doing this project, I practiced my programming skills, especially when creating ripple effects using
+            JavaScript. This is important because the same logic can be applied to many webpages, interactive screens,
+            and even hardware, such as gaming keyboards.
+        </h3>
+        <h3>
+            Additionally, by conducting usability testing, I learned to effectively apply skills such as empathetic
+            design thinking and strategic decision-making.
+        </h3>
+    </div>
+
+    <h1>More Works</h1>
+
+    <div class="works-container">
+        <div class="each-work-card">
+            <a href="https://ilechang.github.io/final-ecom/#cad" target="_blank">
+                <div class="work-discription-bg">
+                    <img src="./v mall cover.png" alt="BootMaster">
+                    <h2 class="work-discription-title">BootMaster (Front-end Development)</h2>
+                </div>
+            </a>
+        </div>
+
+        <div class="each-work-card">
+            <a href="https://www.figma.com/proto/4gzRCpQGN1Hiyp0TXvql7C/Google-Maps---Final-Presentation?node-id=592-1604&t=9oKrZzIhzqb2jlBw-1"
+                target="_blank">
+                <div class="work-discription-bg-3">
+                    <img src="./g maps cover.png" alt="Google Maps Redesign">
+                    <h2 class="work-discription-title">Google Maps Redesign (UX Case Study)</h2>
+                </div>
+            </a>
+        </div>
+
+        <div class="each-work-card">
+            <a href="./index.html" target="_blank">
+                <div class="work-discription-bg-2">
+                    <img src="./drum kit cover.png" alt="Drum Kit">
+                    <h2 class="work-discription-title">Drum Kit (Interactive Webpage)</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,588 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+    
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+  }
+  
+  header {
+   align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 70px 15px 70px;
+    background-color:  #a080f6;;
+    border-bottom: 1px solid #a080f6;;
+    position: sticky; /* Makes the header stick to the top */
+    top: 0; /* Ensures it sticks at the very top */
+    z-index: 1000; /* Keeps it above other elements */
+
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  }
+
+
+  
+  .takeaways {
+    max-width: 1500px;
+    margin: 0 auto 150px auto;
+  }
+
+
+
+  .takeaways h3 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: justify;
+line-height: 1.5rem;
+  }
+
+  .column img {
+    max-width: 100%; /* Ensures the image doesn't exceed the column's width */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Prevents inline spacing issues */
+    margin: 0 auto 15px auto; /* Centers the image horizontally */
+    border-radius: 10px;
+  }
+.drumkitBanner {
+    display: block; /* Removes any inline spacing from the image */
+    max-width: 100%; /* Ensures the image scales with its container */
+    height: auto; /* Maintains the aspect ratio */
+    margin: 0 0 30px 0; /* Removes default margin */
+    padding: 0; /* Removes any padding */
+  }
+
+  .logo img {
+    width: 70px; /* Use this if your logo is an image inside .logo */
+    border-radius: 5px;
+  }
+  
+  nav a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    scale:1.2
+  }
+  
+
+
+  nav a:hover {
+
+    text-decoration: underline;
+  }
+  
+  nav a.active {
+    color: white; /* Hover color for links */
+  }
+  .intro {
+    margin: 50px 0;
+  }
+  
+
+  .creative {
+    max-width: 60%; /* This will make the image responsive */
+    height: auto;
+  }
+
+
+  .profile_photo {
+    display: inline-block; /* Ensure proper rendering */
+    width: 70px;
+    height: 70px;
+    vertical-align: middle;
+    position: relative;
+    animation: moveUpDown 1s infinite ease-in-out; /* Attach the animation */
+    transition: transform 0.3s ease; /* Gradual transition for scaling */
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0); /* Start and end at the original position */
+    }
+    50% {
+        transform: translateY(-6px); /* Move up by 6px at the midpoint */
+    }
+}
+
+/* Define hover animation modification */
+.profile_photo:hover {
+    animation: moveUpDownScaled 1s infinite ease-in-out; /* Replace with scaled animation */
+    transform: scale(1.4); /* Gradual scale with transition */
+}
+
+/* Scaled animation when hovered */
+@keyframes moveUpDownScaled {
+    0%, 100% {
+        transform: translateY(0) scale(1.4); /* Add scaling */
+    }
+    50% {
+        transform: translateY(-6px) scale(1.4); /* Add scaling */
+    }
+}
+
+  .title {
+    font-size: 56px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  
+  .title span.product {
+    display: inline-block;
+    background: #f9ac54;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 30px;
+    margin: 0 10px;
+  }
+  
+  .status {
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+  }
+  
+  .status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: green;
+    border-radius: 50%;
+    margin-left: 5px;
+    opacity: 0.7; /* Set initial opacity to 80% */
+    animation: blink 0.8s infinite; /* Blinking animation */
+  }
+  
+  @keyframes blink {
+    0%, 50% {
+      opacity: 0.7; /* Visible at 80% opacity */
+    }
+    50.1%, 100% {
+      opacity: 0; /* Invisible */
+    }
+  }
+  
+  .intro-text {
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 20px 0;
+  }
+  
+  .highlight {
+    font-weight: bold;
+border:2px solid #f9ac54;
+    padding: 7px 14px;
+    border-radius: 20px;
+  }
+  
+  .skills {
+    margin: 40px 0;
+  }
+  
+  .skills h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  /* CSS in style.css or within a <style> block in the <head> */
+@media (max-width: 1224px) {
+  .status {
+    display: none;
+  }
+}
+
+  
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .skill {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color:  #f9ac54;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    border:2px solid #f9ac54;
+  }
+  
+  .skill:nth-child(even) {
+    background-color: white;
+    color: #333;
+  }
+  
+
+/* About Section */
+.about-section {
+  background-color: #f9ac54;
+  padding: 40px;
+  width: 80%;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  max-width: 1000px;
+}
+
+.about-left,
+.about-right {
+  flex: 1;
+  position:relative;
+}
+
+
+.about-left-text{
+
+  color:white;
+  text-align: left;
+
+}
+
+main{
+  border-bottom:1px solid #f9ac54 
+}
+.profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%; 
+  margin-bottom: 8px;
+  object-fit: cover;
+}
+
+.resume-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: #a080f6;
+  color: white;
+}
+
+.about-right {
+  text-align: left;
+}
+
+.about-title {
+  font-size: 48px;
+  color: white;
+}
+
+.about-quote {
+  font-style: italic;
+  color: white;
+  margin: 10px 0;
+  font-size: 22px;
+}
+
+.about-description {
+  color: white;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Skills Section */
+.skills-section {
+  width: 80%;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.three-column-layout {
+  display: flex;
+  justify-content: space-between; /* Ensures even spacing between columns */
+  gap: 20px; /* Adds spacing between columns */
+  padding: 20px; /* Optional padding around the layout */
+}
+
+.process-container {
+  margin: 20px 0;
+  padding:0 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.process-step {
+  text-align: left;
+  flex: 1;
+  padding: 15px;
+  border: 1px solid #00aaff;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.process-step h3{
+  margin-bottom:10px;
+}
+
+.arrow {
+  font-size: 24px;
+  color: #00aaff;
+}
+.column {
+  flex: 1; /* Ensures all columns have equal width */
+  padding: 10px; /* Optional padding inside each column */
+  box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+.column h2 {
+  margin-bottom: 10px; /* Adds space between the heading and paragraph */
+}
+
+.column p {
+  margin: 0; /* Removes default margin for paragraphs */
+}
+
+.skills-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.skills-column {
+  flex: 1;
+  min-width: 250px;
+  background-color: #555;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.skills-column h3 {
+  font-size: 20px;
+  color: #f9ac54;
+  margin-bottom: 10px;
+}
+
+.skills-column p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: white;
+}
+
+
+.work h1{
+  font-size:50px;
+  margin-bottom: 50px;
+}
+
+.work img {
+  border-radius: 10px 10px 0 0;
+  max-width: 100%;
+  margin: 0;
+}
+
+.work-discription-bg {
+  background-color: #f9ac54;
+  margin: 0;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.work-discription-bg-2 {
+  background-color: #283149;
+  margin: 0;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.work-discription-bg-3 {
+  background-color: #178038;
+  margin: 0;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.work-discription-bg h2 {
+  margin: 0; /* Removes the margin of the h2 element */
+  padding: 10px 0; /* Optional: adds some padding if you want spacing inside the background */
+}
+
+
+.work-discription-title{
+  font-size: 40px;
+  
+  color:white
+}
+
+.each-work-card {
+  transition: all 0.3s ease; /* Smooth transition for the hover effect */
+  margin-bottom:80px;
+}
+
+.each-work-card:hover {
+
+  opacity: 0.8; /* Sets opacity to 80% */
+
+}
+
+
+
+
+
+
+/* Style for dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top:80%;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: 400;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Align navigation items */
+nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Styling for active link */
+nav .active {
+  font-weight: bold;
+}
+
+.contact-button {
+  position: fixed;
+  bottom: 20px; /* 20px from the bottom of the viewport */
+  right: 20px; /* 20px from the right side of the viewport */
+  padding: 20px 30px;
+  font-size: 16px;
+  color: white;
+  background-color: #a080f6;
+  border: 2px solid white;
+  border-radius: 40px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  opacity:0.8;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.works-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.each-work-card {
+  width: 400px; /* Fixed width */
+  height: 300px; /* Fixed height */
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin:10px;
+}
+
+.each-work-card:hover {
+  transform: scale(1.05);
+}
+
+.each-work-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.work-discription-bg,
+.work-discription-bg-2,
+.work-discription-bg-3 {
+
+  padding: 15px;
+  border-radius: 8px;
+  
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.each-work-card img {
+  width: 100%;
+  height: 180px; /* Ensure image fits well */
+  margin-bottom:20px;
+  object-fit: cover; /* Ensures images are cropped properly without distortion */
+  border-radius: 8px;
+}
+
+.work-discription-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
